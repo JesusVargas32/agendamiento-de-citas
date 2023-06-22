@@ -1,40 +1,39 @@
 import 'Cita.dart';
 import 'dart:io';
 
+late final String seleccion;
+
 main() {
   print('Agendamiento de citas medicas.');
   print('- cita1');
   print('- cita2');
   print('- cita3');
   print('Escriba una de las citas que desea seleccionar:');
-  String seleccion = stdin.readLineSync().toString();
+  String seleccion2 = stdin.readLineSync().toString();
 
-  while (seleccion == '') {
+  while (seleccion2 == '') {
     print('Escriba una de las citas que desea seleccionar.');
     print('- cita1');
     print('- cita2');
     print('- cita3');
     print('Seleccione una y escribala.');
-    seleccion = stdin.readLineSync().toString();
+    seleccion2 = stdin.readLineSync().toString();
   }
 
-  while (seleccion != 'cita1' && seleccion != 'cita2' && seleccion != 'cita3') {
+  while (
+      seleccion2 != 'cita1' && seleccion2 != 'cita2' && seleccion2 != 'cita3') {
     print(
         'Si quiere seleccionar alguna de las opciones tiene que escribirlas igual como se muestran.');
-    seleccion = stdin.readLineSync().toString();
+    seleccion2 = stdin.readLineSync().toString();
   }
 
-  stdout.writeln('Su seleccion ha sido esta: $seleccion');
+  stdout.writeln('Su seleccion ha sido esta: $seleccion2');
 
-  if (seleccion == 'cita1' || seleccion == 'cita2' || seleccion == 'cita3') {
+  if (seleccion2 == 'cita1' || seleccion2 == 'cita2' || seleccion2 == 'cita3') {
     Citas();
   }
-/*
-  print('SOLICITUD DE CITA.');
-  print('Cita seleccionada: $seleccion');
-  print('DATOS DE LA CITA');
+
   //print('Fecha: $fecha');
-*/
 }
 
 void Citas() {
@@ -64,7 +63,11 @@ void Citas() {
   }
 }
 
-mostrarDatos() {}
+mostrarDatos() {
+  print('SOLICITUD DE CITA.');
+  print('Cita seleccionada: $seleccion');
+  print('DATOS DE LA CITA');
+}
 
 
 
