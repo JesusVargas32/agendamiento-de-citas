@@ -26,7 +26,7 @@ main() {
 
   stdout.writeln('Su seleccion ha sido esta: $seleccion');
 
-  if (seleccion == 'cita1' && seleccion != 'cita2' && seleccion != 'cita3') {
+  if (seleccion == 'cita1' || seleccion == 'cita2' || seleccion == 'cita3') {
     Citas();
   }
 /*
