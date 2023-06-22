@@ -1,13 +1,14 @@
 import 'Cita.dart';
 import 'dart:io';
 
+late String seleccion = stdin.readLineSync().toString();
+
 main() {
   print('Agendamiento de citas medicas.');
   print('- cita1');
   print('- cita2');
   print('- cita3');
   print('Escriba una de las citas que desea seleccionar:');
-  String seleccion = stdin.readLineSync().toString();
 
   while (seleccion == '') {
     print('Escriba una de las citas que desea seleccionar.');
@@ -29,12 +30,11 @@ main() {
   if (seleccion == 'cita1' || seleccion == 'cita2' || seleccion == 'cita3') {
     Citas();
   }
-/*
+
   print('SOLICITUD DE CITA.');
   print('Cita seleccionada: $seleccion');
   print('DATOS DE LA CITA');
   //print('Fecha: $fecha');
-*/
 }
 
 void Citas() {
